@@ -9,41 +9,82 @@
 <body>
     <h1>Java Notes</h1>
     <h2>Variables</h2>
-    <p>"Let" creates a variable</p>
+    <p><b>"Let"</b> creates a variable</p>
     <p>Can set multiple variables at the same time<p>
     <p>let user = 'John',<br>
         age = 25,<br>
         message = 'Hello';</p>
     <p>variables should be named in camel case</p>
     <p>camelCase likeThis</p>
-    <p>Case sensitivity matters</p>
+    <p><b>Case sensitivity matters</b></p>
     <p>banana /= BANANA</p>
 
     <h2>Constants</h2>
-    <p>const is an unchanging variable</p>
+    <p><b>const</b> is an unchanging variable</p>
     <p>a lot of users declare consts in uppercase</p>
     <p>const COLOR_RED = #F00</p>
 
     <h2>Data Types</h2>
     <p><b>Number</b> - Obvious</p>
     <p><b>String</b> - Words surrounded by ""</p>
-    <p> - You can use a \ to escale a quote, so if you need to use a quote mark, you have to use \' for it to recognize</p>
+    <p> - You can use a \ to escape a quote, so if you need to use a quote mark, you have to use \' for it to recognize</p>
     <p> - Have to use ` backtick to embed a variable in a string, ${name}`</p>
     <p><b>Boolean</b> - True/False, can only be one of the two</p>
     <p>Can use typeof() to discover what type data is</p>
     <p><e>Convert using Number() or toString()</e></p>
 
     <h2>Messing with Strings</h2>
-    <p>x.length - returns # of characters in the var</p>
-    <p></p>
+    <p><b>x.length</b> - returns # of characters in the var</p>
+    <p>i.e. banana.length = 6</p>
+    <p><b>.slice</b> - returns a part of a string as a new variable, first number is starting point, second is finishing point</p>
+    <p>let food = 'apple banana';<br>
+        let secFood = food.slice(6,15); <br>
+        console.log(secFood);<br>
+        returns 'banana'</p>
+    <p><b>.substring</b> - same as .string, but values less than 0 are treated as 0</p>
+    <p><b>.substr</b> - same as .string, but the second value specifies the <e>length,</e> not the specific space</p>
+    <p>let food = 'apple <e>ban</e>ana';<br>
+        let secFood = food.substr(6,<e>3</e>);<br>
+        console.log(secFood);<br>
+        returns 'ban'</p>
+    <p><b>.replace</b> - replaces specified value and replaces it</p>
+    <p>let food = 'apple <e>banana</e>';<br>
+        let secFood = food.replace('banana', 'cactus');<br> 
+        console.log(secFood);<br>
+        returns 'apple <e>cactus</e>'</p>
+    <p>add /g to do all instances<br>
+        add /i to ignore case sensitivity</p>
+    <p>A string is converted to upper case with <e>toUpperCase()</e></p>
+    <p>A string is converted to lower case with <e>toLowerCase()</e></p>
+    <p><e>concat()</e> joins two or more strings</p>
+    <p><e>trim()</e> removes all white space</p>
+    <p><e>trimStart()</e> removes all white space from start</p>
+    <p><e>trimEnd()</e> removes all white space from end</p>
+    <p><e>split()</e> converts string to an array</p>
+    <p>let text = "a,b,c,d,e,f";<br>
+        let textArray = text.split(",")<br>
+        console.log(textArray)<br>
+        returns ['a', 'b', 'c', 'd', 'e', 'f']</p>
+    <p>Can also split by , | " "(spaces)</p>
+    
+    <h2>Comparisons</h2>
+    <p>The below are all boolean, meaning they return as either <e>True or False</e></p>
+    <p>Greater/less than: <e>a > b, a < b</e></p>
+    <p>Greater/less than or equals: <e>a >= b, a <= b</e></p>
+    <p>Equals: <e>a == b</e>, please note the double equality sign == means the equality test, while a single one a = b means an assignment</p>
+    <p>Not equals <e>a != b</e>></p>
+
+
+
+
 
 
 <!-- <-- SCRIPT AREA --> 
 
 <script>
-    const output = "I like the soasdasng."
-    
-console.log(output.length);
+
+
+
 
 </script>
 </body>
