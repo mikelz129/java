@@ -1,31 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function library example</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+  </head>
 <body>
 
+  <input class="numberInput" type="text">
+  <p></p>
+
 <script>
+  let add7 = (x) => x + 7;
+  
+  let multiply = (a,b) => a * b;
 
-let a = +prompt('a?', '');
-    switch (a) {
-        case 0: 
-            alert(0);
-            break;
+  function stringify(x) {
+    return x.toString()
+  } 
 
-        case 1:
-            alert(1);
-            break;
+  function capitalize(x) {
+    let lowercased = x.toLowerCase()
+    let bumped = x.slice(0,1);
+    let remainder = lowercased.slice(1)
+    let fixedBumped = bumped.toUpperCase();
+    let capitalized = fixedBumped.concat(remainder)
+    return capitalized
+  }
 
-        case 2:
-        case 3:
-            alert('2,3');
-        }
-    
-</script>    
-
-    
+  function lastLetter(x) {
+    let length = x.length;
+    let removed = x.slice((length - 1),(length))
+    return removed
+  }
+  
+</script>
 </body>
 </html>
