@@ -19,14 +19,19 @@
 
 
     <script>
-        const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
-        
-        function sort() {
-            console.log(people.toString())
-            for (const guest of people) {
-                let denied = 
+        const reverseString = function(string) {
+            let array = string.split('');
+            console.log('split',array)
+            let reverseArray = [];
+            console.log(array.length)
+            for (let i = array.length; i >= 0; i--) {
+                let reverseArray = array.pop(i);
+                console.log(i)
             }
-        }
+        console.log('finished',reverseArray)
+        };
+
+
     </script>
 </body>
 </html>
