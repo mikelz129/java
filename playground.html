@@ -5,23 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <style>
+    <!-- <style>
         body {
             background-color: darkblue;
             padding: 20% 20%;
         }
-    </style>
+    </style> -->
 </head>
+
 <body>
-    <h1>
-      THE TITLE OF YOUR WEBPAGE
-    </h1>
-    <div id="container"></div>
-  </body>
+  <h1>
+    THE TITLE OF YOUR WEBPAGE
+  </h1>
+  <div id="container"></div>
+  <div id="container">
+    <button id="1">Click Me</button>
+    <button id="2">Click Me</button>
+    <button id="3">Click Me</button>
+</div>
+</body>
     
-    <script>
+<script>
+  const buttons = document.querySelectorAll('button');
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+    alert(button.id);
+  });
+});
         
 
-    </script>
+
+</script>
 </body>
 </html>
