@@ -26,13 +26,24 @@
 </body>
     
 <script>
-  const buttons = document.querySelectorAll('button');
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-    alert(button.id);
-  });
-});
-        
+  let oldNum = 1;
+  let counter = 0;
+  let newNum = 0;
+
+const fibonacci = function(x) {
+  counter = x;
+  currentNum = 0;
+  console.log("answer", oldNum);
+  console.log("lastNum", newNum);
+  console.log("newNum", newNum);
+  for (let i = 1; i < counter; i++) {
+    console.log(newNum,oldNum,currentNum)
+    newNum = oldNum + currentNum;
+    console.log(newNum,oldNum,currentNum)
+
+  }
+  return currentNum
+}
 
 
 </script>
